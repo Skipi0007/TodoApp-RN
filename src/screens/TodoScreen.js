@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {StyleSheet, View, Button} from 'react-native'
+import {StyleSheet, View, Button, Dimensions} from 'react-native'
 import {FontAwesome, AntDesign} from '@expo/vector-icons'
 import { EditModal } from '../components/EditModal'
 import { AppCard } from '../components/ui/AppCard'
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     },
 
     button: {
-        width: '40%'
+        width: Dimensions.get('window').width / 3
     },
 
     title: {
