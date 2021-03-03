@@ -8,8 +8,7 @@ import { THEME } from './src/themes';
 import { MainLayout } from './src/MainLayout';
 import { TodoState } from './src/context/todo/todoState';
 
-
-  Font.loadAsync({
+ Font.loadAsync({
     'roboto-regular': require('./assets/fonts/Roboto-Regular.ttf'),
     'roboto-bold': require('./assets/fonts/Roboto-Bold.ttf')
   })
@@ -18,11 +17,15 @@ import { TodoState } from './src/context/todo/todoState';
 export default function App() {
   const [isReady, setIsReady] =useState(false)
   
+  
+   
+
   return (
     <TodoState>
       <MainLayout/>
     </TodoState>
-  );
+  )
 }
+
 
 
