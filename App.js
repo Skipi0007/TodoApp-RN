@@ -7,6 +7,7 @@ import {AppLoading} from 'expo-app-loading'
 import { THEME } from './src/themes';
 import { MainLayout } from './src/MainLayout';
 import { TodoState } from './src/context/todo/todoState';
+import { ScreenState } from './src/context/screen/ScreenState';
 
  Font.loadAsync({
     'roboto-regular': require('./assets/fonts/Roboto-Regular.ttf'),
@@ -21,9 +22,11 @@ export default function App() {
    
 
   return (
-    <TodoState>
-      <MainLayout/>
-    </TodoState>
+    <ScreenState>
+      <TodoState>
+        <MainLayout/>
+      </TodoState>
+    </ScreenState>
   )
 }
 
